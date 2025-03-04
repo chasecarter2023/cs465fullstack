@@ -1,0 +1,23 @@
+{
+  "name": "travlr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chasecarter2023/cs465fullstack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chasecarter2023/cs465fullstack/issues"
+  },
+  "homepage": "https://github.com/chasecarter2023/cs465fullstack#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
