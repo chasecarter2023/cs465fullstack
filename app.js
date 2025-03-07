@@ -1,18 +1,26 @@
 // app.js
 const express = require('express');
 const path = require('path');
+const hbs = require('hbs');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
 
-// Serve static files from the 'public' folder
+// Set Handlebars as the view engine
+app.set('view engine', 'hbs');
+// Tell Express where to find your views
+app.set('views', path.join(__dirname, 'app_server', 'views'));
+
+// Register partials (if you have any)
+hbs.registerPartials(path.join(__dirname, 'app_server', 'views', 'partials'));
+
+// Serve static assets from the public folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Basic route to serve index.html
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
+// Import and use the traveler routes
+const travelerRouter = require('./app_server/routes/traveler');
+app.use('/', travelerRouter);
 
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
