@@ -33,8 +33,10 @@ const travelerController = {
   
     // Travel page handler
     travel: (req, res) => {
-      res.render('travel', { title: 'Travel With Us' });
-    }
+      const fs = require('fs');
+      const trips = JSON.parse(fs.readFileSync('./data/trips.json', 'utf8'));
+      res.render('travel', { title: 'Travel With Us', trips: trips });
+    }    
   };
   
   module.exports = travelerController;

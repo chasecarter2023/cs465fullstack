@@ -1,0 +1,21 @@
+[
+    {
+      "name": "Gale Reef",
+      "image": "/images/reef1.jpg",
+      "description1": "Sed et augue lorem. In sit amet placerat arcu. (Trip: Gale Reef)",
+      "description2": "Sed consequat libero ut turpis venenatis ut aliquam risus semper. Etiam convallis mi vel risus pretium sodales."
+    },
+    {
+      "name": "Dawson’s Reef",
+      "image": "/images/reef2.jpg",
+      "description1": "Integer magna leo, posuere et dignissim vitae, porttitor at odio. (Trip: Dawson’s Reef)",
+      "description2": "Vulputate, vulputate at est. Morbi aliquet viverra metus eu consectetur. In lorem dui, elementum sit amet convallis ac."
+    },
+    {
+      "name": "Claire’s REEF",
+      "image": "/images/reef3.jpg",
+      "description1": "Donec sed felis risus. Nulla facilisi. (Trip: Claire’s REEF)",
+      "description2": "Vulputate eget libero. In hac habitasse platea dictumst. Integer purus justo, egestas eu consectetur eu, cursus in tortor."
+    }
+  ]
+  
