@@ -14,4 +14,8 @@ router.get('/news', travelerController.news);
 router.get('/rooms', travelerController.rooms);
 router.get('/travel', travelerController.travel);
 
+// New routes for editing and updating a trip
+router.get('/travel/edit/:id', travelerController.editTrip);
+router.post('/travel/update/:id', travelerController.updateTrip);
+
 module.exports = router;

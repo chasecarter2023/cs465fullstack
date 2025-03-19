@@ -1,6 +1,5 @@
 <!-- travel.hbs -->
 <!DOCTYPE html>
-
 <html>
 <head>
   <meta charset="UTF-8">
@@ -38,6 +37,8 @@
                   <h2><a href="/travel">{{name}}</a></h2>
                   <p>{{description1}}</p>
                   <p>{{description2}}</p>
+                  <!-- Edit link to open the edit screen for this trip -->
+                  <a href="/travel/edit/{{id}}">Edit</a>
                 </li>
                 {{/each}}
               </ul>

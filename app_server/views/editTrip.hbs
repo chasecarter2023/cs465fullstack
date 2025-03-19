@@ -1,4 +1,4 @@
-<!-- editTrip.hbs -->
+<!-- app_server/views/editTrip.hbs -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,25 +33,25 @@
               <form action="/travel/update/{{trip.id}}" method="post">
                 <label for="name">Trip Name:</label>
                 <input type="text" id="name" name="name" value="{{trip.name}}">
-                
+                <br>
                 <label for="image">Image URL:</label>
                 <input type="text" id="image" name="image" value="{{trip.image}}">
-                
+                <br>
                 <label for="description1">Description 1:</label>
                 <textarea id="description1" name="description1">{{trip.description1}}</textarea>
-                
+                <br>
                 <label for="description2">Description 2:</label>
                 <textarea id="description2" name="description2">{{trip.description2}}</textarea>
-                
+                <br>
                 <input type="submit" value="Update Trip">
               </form>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div id="footer">
-      <p>© 2023 by Travlr Getaways. All Rights Reserved</p>
+      <div id="footer">
+        <p>© 2023 by Travlr Getaways. All Rights Reserved</p>
+      </div>
     </div>
   </div>
 </body>
