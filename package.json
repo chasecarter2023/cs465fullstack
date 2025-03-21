@@ -19,6 +19,7 @@
   "homepage": "https://github.com/chasecarter2023/cs465fullstack#readme",
   "dependencies": {
     "express": "^4.21.2",
-    "hbs": "^4.2.0"
+    "hbs": "^4.2.0",
+    "mongoose": "^8.12.1"
   }
 }
