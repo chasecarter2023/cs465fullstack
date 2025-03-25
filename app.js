@@ -2,12 +2,14 @@
 
 require('./db');
 
-
 const express = require('express');
 const path = require('path');
 const hbs = require('hbs');
 
 const app = express();
+
+// Middleware to parse JSON (useful for API endpoints)
+app.use(express.json());
 
 // Set Handlebars as the view engine
 app.set('view engine', 'hbs');
@@ -20,9 +22,13 @@ hbs.registerPartials(path.join(__dirname, 'app_server', 'views', 'partials'));
 // Serve static assets from the public folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Import and use the traveler routes
+// Import and use the traveler routes (MVC)
 const travelerRouter = require('./app_server/routes/traveler');
 app.use('/', travelerRouter);
+
+// Import and use the API routes
+const tripApiRoutes = require('./app_api/routes/tripRoutes');
+app.use('/API', tripApiRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

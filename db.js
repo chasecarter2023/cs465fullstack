@@ -1,10 +1,11 @@
+//Chase Carter
 const mongoose = require('mongoose');
 console.log("Attempting to connect to MongoDB...");
 
 mongoose.connect('mongodb://127.0.0.1:27017/travlr-getaways', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  serverSelectionTimeoutMS: 30000  // Increase timeout if needed
+  serverSelectionTimeoutMS: 30000  // Increase timeout 
 });
 
 const db = mongoose.connection;
