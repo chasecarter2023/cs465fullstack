@@ -9,5 +9,5 @@ const tripSchema = new mongoose.Schema({
   description2: { type: String, required: true }
 });
 
-// Check if the model already exists. If yes, use it; otherwise, compile a new one.
+// Check if it exists. If yes, use it; or, get a new one.
 module.exports = mongoose.models.Trip || mongoose.model('Trip', tripSchema);
