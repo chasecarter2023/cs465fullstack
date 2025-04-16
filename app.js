@@ -5,8 +5,12 @@ require('./db');
 const express = require('express');
 const path = require('path');
 const hbs = require('hbs');
+const cors = require('cors');
 
 const app = express();
+
+// Enable CORS for all routes
+app.use(cors());
 
 // Middleware to parse JSON (useful for API endpoints)
 app.use(express.json());
@@ -26,9 +30,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 const travelerRouter = require('./app_server/routes/traveler');
 app.use('/', travelerRouter);
 
-// Import and use the API routes
+// Import and use the Trip API routes
 const tripApiRoutes = require('./app_api/routes/tripRoutes');
 app.use('/API', tripApiRoutes);
+
+// Import and use the Authentication routes
+// Assuming your authRoutes (with the /login endpoint) is placed in app_api/routes/authRoutes.js
+const authRoutes = require('./app_api/routes/authRoutes');
+app.use('/API', authRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
